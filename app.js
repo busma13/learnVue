@@ -4,11 +4,16 @@ const app = Vue.createApp({
   data() {
     return {
       showBooks: true,
-      title: "The Final Empire",
-      author: "Brandon Sanderson",
-      age: 45,
-      x: 0,
-      y: 0,
+      books: [
+        { title: "name of the wind", author: "Patrick Rothfuss" },
+        { title: "the way of kings", author: "Brandon Sanderson" },
+        { title: "the final empire", author: "Brandon Sanderson" },
+      ],
+      // title: "The Final Empire",
+      // author: "Brandon Sanderson",
+      // age: 45,
+      // x: 0,
+      // y: 0,
     };
   },
   methods: {
