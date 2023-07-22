@@ -15,6 +15,10 @@
       margin: 20px;
       display: inline-block;
     }
+
+    .book-cover {
+      height: 100px;
+    }
   </style>
 </head>
 
@@ -22,9 +26,12 @@
   <h1>Hello, Vue :)</h1>
 
   <div id="app">
+    <!-- attribute binding -->
+    <!-- <a v-bind:href="url">best website ever</a> -->
     <div v-if="showBooks">
       <ul>
         <li v-for="book in books">
+          <img class="book-cover" :src="book.img" :alt="book.title">
           <h3>{{ book.title }}</h3>
           <p>{{ book.author }}</p>
         </li>
