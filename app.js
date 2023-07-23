@@ -36,14 +36,20 @@ const app = Vue.createApp({
     toggleShowBooks() {
       this.showBooks = !this.showBooks;
     },
-    handleEvent(e, data) {
-      console.log(e, e.type);
-      if (data) console.log(data);
+    toggleIsFav(e) {
+      const selectedBook = this.books.filter(
+        (book) => book.title === e.target.firstChild.alt
+      )[0];
+      selectedBook.isFav = !selectedBook.isFav;
     },
-    handleMousemove(e) {
-      this.x = e.offsetX;
-      this.y = e.offsetY;
-    },
+    // handleEvent(e, data) {
+    //   console.log(e, e.type);
+    //   if (data) console.log(data);
+    // },
+    // handleMousemove(e) {
+    //   this.x = e.offsetX;
+    //   this.y = e.offsetY;
+    // },
     // changeTitle(title) {
     //   this.title = title;
     // },

@@ -59,7 +59,7 @@
     <!-- <a v-bind:href="url">best website ever</a> -->
     <div v-if="showBooks">
       <ul>
-        <li v-for="book in books" :class="{ fav: book.isFav }">
+        <li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleIsFav($event)">
           <img class="book-cover" :src="book.img" :alt="book.title">
           <h3>{{ book.title }}</h3>
           <p>{{ book.author }}</p>
